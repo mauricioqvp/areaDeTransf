@@ -5,11 +5,19 @@ header {
     align-items: center;
 }
 
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .transferArea-nav-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #fff;
+    width: 75%;
     /* background-color: rgb(0, 255, 55); */
 }
 
