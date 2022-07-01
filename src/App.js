@@ -1,14 +1,14 @@
 import Rota from './Routes';
-import UserProvider from './assets/contexts/user';
+import SentencesProvider from './assets/contexts/sentences';
 import './App.css';
 
 function App() {
   return (
-    <UserProvider>
+    <SentencesProvider>
       <div className="App">
           <Rota />
       </div>
-    </UserProvider>
+    </SentencesProvider>
   );
 }
 

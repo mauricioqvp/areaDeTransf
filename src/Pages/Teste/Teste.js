@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 
-import { UserContext } from '../../assets/contexts/user';
+import { SentencesContext } from '../../assets/contexts/sentences';
 
 function Teste() {
-  const { alunos, setAlunos } = useContext(UserContext);
+  const { alunos, setAlunos } = useContext(SentencesContext);
 
   return (
     <div>
