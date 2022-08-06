@@ -35,6 +35,10 @@ function Home() {
 
     }, []);
 
+    function copiaIndice(indice, frase){
+        alert(indice +" "+ frase);
+    }
+
     return (
         <>
             <h1>Frases</h1>
@@ -43,6 +47,7 @@ function Home() {
                     <div>
                         <span key={item.id}>Frase: </span>
                         <span>{item.frase} - usadas <strong>{item.qtdUsos}</strong> vezes.</span>
+                        <button onClick={() => copiaIndice(item.id, item.frase)} alt="Copia texto para a área de trabalho">Copiar</button>
                         <br />
                     </div>
                 )

@@ -19,13 +19,15 @@ body{
   background-color: #efefef;
 }
 
-a{
-  text-decoration: none;
+a {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-ul{
+/* ul{
   list-style: none;
-}
+} */
 
 button{
   cursor: pointer;
