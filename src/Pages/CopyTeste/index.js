@@ -12,7 +12,6 @@ function CopyTeste() {
             .catch(err => {
                 console.log('Something went wrong', err);
             })
-
     }
 
     return (

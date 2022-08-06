@@ -36,7 +36,7 @@ function Home() {
     }, []);
 
     function copiaIndice(indice, frase){
-        alert(indice +" "+ frase);
+        navigator.clipboard.writeText(frase);
     }
 
     return (
