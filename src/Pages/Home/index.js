@@ -32,15 +32,27 @@ function Home() {
                 .catch(() => {
                     alert('Falha ao ler o registro.');
                 })
-        }
+            }
+            
+            readRegister();
+            
+        }, []);
 
-        readRegister();
-
-    }, []);
-
-    function copiaIndice(frase){
+    async function copiaIndice(id, frase, categoria, usos) {
         navigator.clipboard.writeText(frase);
         toast.success("Área de transferência");
+
+                await firebase.firestore().collection('tb_frases')
+                .doc(id)
+                .set({
+                    id: id,
+                    frase: frase,
+                    categoria: categoria,
+                    qtdUsos: usos + 1
+                })
+                .then(() => {
+                    console.log('Gravada a nova qtdUsos na frase escolhida');
+                });
     }
 
     return (
@@ -49,14 +61,14 @@ function Home() {
             <div className='box-container'>
                 {frases.map((item) => {
                     return (
-                        <div>
+                        <div key={item.id}>
                             <div className='frase-container'>
-                                <span>{item.frase}</span><br/>
+                                <textarea className='textarea-container' defaultValue={item.frase}></textarea><br />
                             </div>
-                                <div className='buttons-container'>
-                                    <button onClick={() => copiaIndice(item.frase)} alt="Copia texto para a área de trabalho">Copiar</button>
-                                    - usadas <strong>{item.qtdUsos}</strong> vezes.
-                                </div>
+                            <div className='buttons-container'>
+                                <button onClick={() => copiaIndice(item.id, item.frase, item.categoria, item.qtdUsos)} alt="Copia texto para a área de trabalho">Copiar</button>
+                                - usadas <strong>{item.qtdUsos}</strong> vezes.
+                            </div>
                         </div>
                     )
                 })

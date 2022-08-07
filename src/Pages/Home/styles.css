@@ -11,9 +11,9 @@
 }
 
 .box-container{
-    width: 80%;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,235px);
+    grid-template-columns: repeat(auto-fill,225px);
     grid-gap: 20px 5px;
     justify-content: space-between;
     background-color: #e4e7ec;
@@ -36,4 +36,9 @@
     top: -35px;
     left: 10px;
     /* background-color: aqua; */
+}
+
+.textarea-container{
+    width: 195px;
+    height: 190px;
 }
