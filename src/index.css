@@ -20,14 +20,12 @@ body{
 }
 
 a {
-  color: red;
-  text-decoration: underline;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-/* ul{
+ul{
   list-style: none;
-} */
+}
 
 button{
   cursor: pointer;

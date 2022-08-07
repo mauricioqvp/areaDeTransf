@@ -2,6 +2,7 @@ import firebase from '../../firebaseConnection';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './styles.css';
 
 function Home() {
 
@@ -43,20 +44,25 @@ function Home() {
     }
 
     return (
-        <>
-            <h1>Frases</h1>
-            {frases.map((item) => {
-                return (
-                    <div>
-                        <span key={item.id}>Frase: </span>
-                        <span>{item.frase} - usadas <strong>{item.qtdUsos}</strong> vezes.</span>
-                        <button onClick={() => copiaIndice(item.frase)} alt="Copia texto para a área de trabalho">Copiar</button>
-                        <br />
-                    </div>
-                )
-            })
-            }
-        </>
+        <div className='container'>
+            <h1 className='titulo'>Frases</h1>
+            <div className='box-container'>
+                {frases.map((item) => {
+                    return (
+                        <div>
+                            <div className='frase-container'>
+                                <span>{item.frase}</span><br/>
+                            </div>
+                                <div className='buttons-container'>
+                                    <button onClick={() => copiaIndice(item.frase)} alt="Copia texto para a área de trabalho">Copiar</button>
+                                    - usadas <strong>{item.qtdUsos}</strong> vezes.
+                                </div>
+                        </div>
+                    )
+                })
+                }
+            </div>
+        </div>
     );
 }
 
