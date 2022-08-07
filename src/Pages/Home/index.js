@@ -24,6 +24,7 @@ function Home() {
                             qtdUsos: doc.data().qtdUsos
                         });
                     });
+                    lista.sort((a,b) => (a.qtdUsos > b.qtdUsos) ? -1 : ((b.qtdUsos > a.qtdUsos) ? 1 : 0));
                     setFrases(lista);
                 })
                 .then(() => {
