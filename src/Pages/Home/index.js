@@ -1,5 +1,7 @@
 import firebase from '../../firebaseConnection';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
 
@@ -35,8 +37,9 @@ function Home() {
 
     }, []);
 
-    function copiaIndice(indice, frase){
+    function copiaIndice(frase){
         navigator.clipboard.writeText(frase);
+        toast.success("Área de transferência");
     }
 
     return (
@@ -47,7 +50,7 @@ function Home() {
                     <div>
                         <span key={item.id}>Frase: </span>
                         <span>{item.frase} - usadas <strong>{item.qtdUsos}</strong> vezes.</span>
-                        <button onClick={() => copiaIndice(item.id, item.frase)} alt="Copia texto para a área de trabalho">Copiar</button>
+                        <button onClick={() => copiaIndice(item.frase)} alt="Copia texto para a área de trabalho">Copiar</button>
                         <br />
                     </div>
                 )

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import CopyTeste from './Pages/CopyTeste';
+import { ToastContainer } from 'react-toastify';
 
 import Home from './Pages/Home';
 import InputData from './Pages/InputData';
@@ -9,6 +10,7 @@ import Teste from './Pages/Teste/Teste';
 function Router(){
     return(
         <BrowserRouter>
+        <ToastContainer />
             <Routes>
                 <Route path="/" exact element={<Home />} />
                 <Route path="/teste" exact element={<Teste />} />
