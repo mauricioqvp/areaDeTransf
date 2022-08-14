@@ -6,10 +6,12 @@ import { ToastContainer } from 'react-toastify';
 import Home from './Pages/Home';
 import InputData from './Pages/InputData';
 import Teste from './Pages/Teste/Teste';
+import Navbar from './components/Navbar';
 
 function Router(){
     return(
         <BrowserRouter>
+        <Navbar />
         <ToastContainer />
             <Routes>
                 <Route path="/" exact element={<Home />} />

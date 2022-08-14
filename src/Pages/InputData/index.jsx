@@ -41,14 +41,14 @@ function InputData() {
     }
 
     return (
-        <div className='container'>
-            <div className='painel'>
+        <div className='inputData-container'> 
+            <div className='inputData-painel'>
                 <form onSubmit={handleSubmit}>
-                    <label for="frase">Frase: </label>
-                    <input type="text" name="frase" value={frase} onChange={(e) => setFrase(e.target.value)} /><br />
-                    <label for="categoria">Categoria: </label>
+                    <label for="frase">Frase: </label><br />
+                    <textarea cols="45" rows="10" className="input-frase" value={frase} onChange={(e) => setFrase(e.target.value)}></textarea><br />
+                    <label for="categoria">Categoria: </label><br />
                     <input type="text" name="categoria" value={categoria} onChange={(e) => setCategoria(e.target.value)} /><br />
-                    <label for="categoria">Quantidade de usos: </label>
+                    <label for="categoria">Quantidade de usos: </label><br />
                     <input type="text" name="qtdUsos" value={qtdUsos} onChange={(e) => setQtdUsos(e.target.value)} /><br />
                     <button type="submit">Cadastrar</button>
                 </form>

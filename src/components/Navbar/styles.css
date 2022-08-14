@@ -5,7 +5,7 @@ header {
     align-items: center;
 }
 
-.container{
+.navbar-container{
     display: flex;
     align-items: center;
     justify-content: space-around;

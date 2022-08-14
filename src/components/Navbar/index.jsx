@@ -2,22 +2,23 @@ import { ReactComponent as TransferImg } from '../../assets/img/transfer.svg';
 import { ReactComponent as PencilImg } from '../../assets/img/pencil.svg';
 import { ReactComponent as GetOutImg } from '../../assets/img/getout.svg';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
         <header>
-            <nav className="container">
+            <nav className="navbar-container">
                 <div className="transferArea-nav-content">
                     <h1><TransferImg /> Área de Transferência</h1>
                     <div className="transferArea-contact-container">
-                        <a href="#Editar" target="_blank" rel="noreferrer">
+                        <Link to="/inputdata" rel="noreferrer">
                             <div className="transferArea-contact-link">
                                 <div className="transferArea-icon">
                                     <PencilImg />
                                 </div>
-                                Editar frases
+                                Novas frases
                             </div>
-                        </a>
+                        </Link>
                         <a href="#Sair" target="_blank" rel="noreferrer">
                             <div className="transferArea-contact-link">
                             <div className="transferArea-icon">

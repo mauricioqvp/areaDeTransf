@@ -1,11 +1,46 @@
-.container{
+.inputData-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background-color: antiquewhite; */
 }
 
-.painel{
-    width: 60%;
+.inputData-painel{
+    width: 30%;
+    padding: 20px;
+    border-radius: 5px;
     margin-top: 20px;
-    line-height: 2em;
+    color: #fff;
+    background-color: rgba(41,49,244, 0.95);
+    line-height: 1.8em;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+textarea{
+    border-width: 0px;
+    box-shadow: 2px 2px 5px;    
+}
+
+input{
+    width: 200px;
+    height: 2.2em;
+    border-radius: 4px;
+    border-width: 0px;
+    box-shadow: 2px 2px 5px;
+    padding: 5px 10px;
+}
+
+.input-frase{
+    background-color: rgb(246, 243, 240);
+}
+
+button{
+    width: 100px;
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 3px;
+    border-width: 0px;
+    background-color: rgb(16, 46, 136);
+    color: #fff;
 }
