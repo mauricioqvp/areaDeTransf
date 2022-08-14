@@ -17,12 +17,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-textarea{
-    border-width: 0px;
-    box-shadow: 2px 2px 5px;    
-}
-
-input{
+.inputData-input{
     width: 200px;
     height: 2.2em;
     border-radius: 4px;
@@ -33,9 +28,12 @@ input{
 
 .input-frase{
     background-color: rgb(246, 243, 240);
+    border-width: 0px;
+    box-shadow: 2px 2px 5px;
+    border-radius: 4px;
 }
 
-button{
+.inputData-button{
     width: 100px;
     margin-top: 20px;
     height: 30px;

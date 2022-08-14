@@ -1,20 +1,18 @@
 .titulo{
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .container {
-    display: flex;
     justify-content: center;
-    width: 900px;
-    margin: 0 auto;
 }
 
 .box-container{
-    width: 90%;
+    width: 95%;
     display: grid;
     grid-template-columns: repeat(auto-fill,225px);
-    grid-gap: 20px 5px;
+    grid-gap: 13px 5px;
     justify-content: space-between;
     background-color: #e4e7ec;
     margin: 10px;

@@ -9,7 +9,7 @@ function Navbar() {
         <header>
             <nav className="navbar-container">
                 <div className="transferArea-nav-content">
-                    <h1><TransferImg /> Área de Transferência</h1>
+                    <h1><TransferImg /> <Link to="/" >Área de Transferência</Link></h1>
                     <div className="transferArea-contact-container">
                         <Link to="/inputdata" rel="noreferrer">
                             <div className="transferArea-contact-link">
