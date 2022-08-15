@@ -56,6 +56,22 @@ function Home() {
                 });
     }
 
+    async function atualizaConteudo(id, frase) {
+        navigator.clipboard.writeText(frase);
+        toast.success("Área de transferência");
+                
+                // corrigir esta rotina para update deste conteúdo
+                await firebase.firestore().collection('tb_frases')
+                .doc(id)
+                .set({
+                    id: id,
+                    frase: frase,
+                })
+                .then(() => {
+                    console.log('Não está fazendo a tarefa correta.');
+                });
+    }
+
     return (
         <div className='container'>
             <h1 className='titulo'>Frases</h1>
@@ -67,8 +83,17 @@ function Home() {
                                 <textarea className='textarea-container' defaultValue={item.frase}></textarea><br />
                             </div>
                             <div className='buttons-container'>
-                                <button onClick={() => copiaIndice(item.id, item.frase, item.categoria, item.qtdUsos)} alt="Copia texto para a área de trabalho">Copiar</button>
-                                - usadas <strong>{item.qtdUsos}</strong> vezes.
+                                <button 
+                                    onClick={() => copiaIndice(item.id, item.frase, item.categoria, item.qtdUsos)} 
+                                    alt="Copia texto para a área de trabalho">
+                                    Copiar
+                                </button>
+                                    <strong>{item.qtdUsos} - {item.categoria}</strong>
+                                <button 
+                                    onClick={() => atualizaConteudo(item.id, item.frase)} 
+                                    alt="Atualizar com este conteúdo.">
+                                    Editar
+                                </button>
                             </div>
                         </div>
                     )
