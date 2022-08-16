@@ -4,6 +4,12 @@
     text-align: center;
 }
 
+.titulo-frases{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .container {
     justify-content: center;
 }
@@ -31,12 +37,33 @@
 
 .buttons-container{
     position: relative;
-    top: -35px;
-    left: 10px;
+    top: -30px;
+    left: 15px;
     /* background-color: aqua; */
 }
 
 .textarea-container{
     width: 195px;
-    height: 190px;
+    height: 175px;
+}
+
+.titulo-esquerdo{
+    width: 300px;
+    height: 20px;
+}
+
+.titulo-direito{
+    width: 300px;
+    height: 20px;
+    margin-top: 18px;
+    padding-left: 140px;
+}
+
+.frase-input{
+    width: 200px;
+    height: 2.5em;
+    border-radius: 4px;
+    border: 1px solid rgb(170, 158, 158);
+    box-shadow: 2px 2px 5px -2px;
+    padding: 5px 10px;
 }

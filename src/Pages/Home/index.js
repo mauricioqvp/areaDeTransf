@@ -7,6 +7,7 @@ import './styles.css';
 function Home() {
 
     const [frases, setFrases] = useState([]);
+    const [categoria, setCategoria] = useState('Todas as categorias');
 
     useEffect(() => {
         async function readRegister() {
@@ -72,14 +73,36 @@ function Home() {
                 });
     }
 
+    function handleChangeSelect(e){
+        setCategoria(e.target.value);
+    }   
+
     return (
         <div className='container'>
-            <h1 className='titulo'>Frases</h1>
+            <div className='titulo-frases'>
+                <div className='titulo-esquerdo'></div>
+                <h1 className='titulo'>Frases</h1>
+                <div className='titulo-direito'>
+                <select value={categoria} onChange={handleChangeSelect} name="categoria" className="frase-input">
+                        <option value={categoria}>{categoria}</option>
+                        <option value="Pacotes">Pacotes</option>
+                        <option value="Contas">Contas</option>
+                        <option value="Chegada">Chegada</option>
+                        <option value="Vendas">Vendas</option>
+                        <option value="Aluguel casa">Aluguel casa</option>
+                        <option value="Orientação">Orientação</option>
+                        <option value="da Pousada">da Pousada</option>
+                        <option value="Check-in">Check-in</option>
+                        <option value="Mensalistas">Mensalistas</option>
+                    </select>
+                </div>
+            </div>
             <div className='box-container'>
                 {frases.map((item) => {
                     return (
                         <div key={item.id}>
                             <div className='frase-container'>
+                                <div><strong>{item.qtdUsos} - {item.categoria}</strong></div>
                                 <textarea className='textarea-container' defaultValue={item.frase}></textarea><br />
                             </div>
                             <div className='buttons-container'>
@@ -88,7 +111,6 @@ function Home() {
                                     alt="Copia texto para a área de trabalho">
                                     Copiar
                                 </button>
-                                    <strong>{item.qtdUsos} - {item.categoria}</strong>
                                 <button 
                                     onClick={() => atualizaConteudo(item.id, item.frase)} 
                                     alt="Atualizar com este conteúdo.">

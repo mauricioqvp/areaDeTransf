@@ -6,7 +6,7 @@ function InputData() {
 
     const [frase, setFrase] = useState('');
     const [categoria, setCategoria] = useState('');
-    const [qtdUsos, setQtdUsos] = useState('');
+    const [qtdUsos, setQtdUsos] = useState('0');
 
     const [preenchido, setPreenchido] = useState(false);
 
@@ -52,19 +52,17 @@ function InputData() {
                     <textarea cols="48" rows="10" className="input-frase" value={frase} onChange={(e) => setFrase(e.target.value)}></textarea><br />
 
                     <label for="categoria">Categoria: </label><br />
-                    <input type="text" name="categoria" className="inputData-input" value={categoria} onChange={(e) => setCategoria(e.target.value)} /><br />
-
-  <select value={categoria} onChange={handleChangeSelect} name="categoria" className="inputData-input">
-    <option value="Pacotes">Pacotes</option>
-    <option value="Contas">Contas</option>
-    <option value="Chegada">Chegada</option>
-    <option value="Vendas">Vendas</option>
-    <option value="Aluguel casa">Aluguel casa</option>
-    <option value="Orientação">Orientação</option>
-    <option value="da Pousada">da Pousada</option>
-    <option value="Check-in">Check-in</option>
-    <option value="Mensalistas">Mensalistas</option>
-  </select>
+                    <select value={categoria} onChange={handleChangeSelect} name="categoria" className="inputData-input">
+                        <option value="Pacotes">Pacotes</option>
+                        <option value="Contas">Contas</option>
+                        <option value="Chegada">Chegada</option>
+                        <option value="Vendas">Vendas</option>
+                        <option value="Aluguel casa">Aluguel casa</option>
+                        <option value="Orientação">Orientação</option>
+                        <option value="da Pousada">da Pousada</option>
+                        <option value="Check-in">Check-in</option>
+                        <option value="Mensalistas">Mensalistas</option>
+                    </select>
                     
                     <br />
                     <label for="categoria">Quantidade de usos: </label>
