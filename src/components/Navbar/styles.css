@@ -22,11 +22,16 @@ header {
 }
 
 .transferArea-nav-content h1 {
+    display: flex;
     font-size: 24px;
-    margin: 0;
     font-weight: 700;
     /* background-color: red; */
     
+}
+
+.transferArea-title{
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
 .transferArea-contact-container {
