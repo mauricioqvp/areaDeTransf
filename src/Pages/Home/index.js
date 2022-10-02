@@ -112,11 +112,13 @@ function Home() {
                             </div>
                             <div className='buttons-container'>
                                 <button
+                                    className='btn-copiar'
                                     onClick={() => copiaIndice(item.id, item.frase, item.categoria, item.qtdUsos)}
                                     alt="Copia texto para a área de trabalho">
                                     Copiar
                                 </button>
                                 <button
+                                    className='btn-editar'
                                     onClick={() => atualizaConteudo(item.id, item.frase)}
                                     alt="Atualizar com este conteúdo.">
                                     Editar

@@ -39,13 +39,13 @@
     height: 30px;
     border-radius: 3px;
     border-width: 0px;
-    background-color: #711DF4;
+    background-color: #f3f0f8;
     box-shadow: 2px 2px 5px #000;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .inputData-button:hover{
-    color: #000;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px rgb(58, 49, 49);
+    color: rgb(51, 7, 197);
+    
+    box-shadow: 2px 4px 7px #000;
 }

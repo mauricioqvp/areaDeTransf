@@ -48,10 +48,10 @@ function InputData() {
         <div className='inputData-container'> 
             <div className='inputData-painel'>
                 <form onSubmit={handleSubmit}>
-                    <label for="frase">Frase: </label><br />
+                    <label htmlFor="frase">Frase: </label><br />
                     <textarea cols="48" rows="10" className="input-frase" value={frase} onChange={(e) => setFrase(e.target.value)}></textarea><br />
 
-                    <label for="categoria">Categoria: </label><br />
+                    <label htmlFor="categoria">Categoria: </label><br />
                     <select value={categoria} onChange={handleChangeSelect} name="categoria" className="inputData-input">
                         <option value="Pacotes">Pacotes</option>
                         <option value="Contas">Contas</option>
@@ -65,7 +65,7 @@ function InputData() {
                     </select>
                     
                     <br />
-                    <label for="categoria">Quantidade de usos: </label>
+                    <label htmlFor="categoria">Quantidade de usos: </label>
                     <input type="text" name="qtdUsos" className="inputData-input" value={qtdUsos} onChange={(e) => setQtdUsos(e.target.value)} /><br />
                     <button className="inputData-button" type="submit">Cadastrar</button>
                 </form>
