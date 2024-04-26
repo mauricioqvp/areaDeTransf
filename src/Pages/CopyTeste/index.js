@@ -1,6 +1,6 @@
 import React from "react";
 
-function CopyTeste() {
+function CopyTesteXXX() {
 
     function copyToClickBoard() {
         var content = document.getElementById('textArea').innerHTML;
@@ -26,4 +26,4 @@ function CopyTeste() {
     );
 }
 
-export default CopyTeste;
+export default CopyTesteXXX;

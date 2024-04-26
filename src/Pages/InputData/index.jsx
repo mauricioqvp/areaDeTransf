@@ -8,7 +8,7 @@ function InputData() {
     const [categoria, setCategoria] = useState('');
     const [qtdUsos, setQtdUsos] = useState('0');
 
-    const [preenchido, setPreenchido] = useState(false);
+    const [preenchido, setPreenchido] = useState();
 
     useEffect(() => {
         if (preenchido) {
@@ -37,7 +37,8 @@ function InputData() {
     function handleSubmit(e) {
         e.preventDefault();
         setPreenchido(true);
-        console.log(preenchido);
+        setQtdUsos(0);
+        console.log(preenchido + "<-");
     }
 
     function handleChangeSelect(e){
@@ -47,11 +48,11 @@ function InputData() {
     return (
         <div className='inputData-container'> 
             <div className='inputData-painel'>
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="frase">Frase: </label><br />
-                    <textarea cols="48" rows="10" className="input-frase" value={frase} onChange={(e) => setFrase(e.target.value)}></textarea><br />
+                <form className='inputData-form' onSubmit={handleSubmit}>
+                    <label htmlFor="frase">Frase: </label>
+                    <textarea cols="48" rows="10" className="input-frase" value={frase} onChange={(e) => setFrase(e.target.value)}></textarea>
 
-                    <label htmlFor="categoria">Categoria: </label><br />
+                    <label htmlFor="categoria">Categoria: </label>
                     <select value={categoria} onChange={handleChangeSelect} name="categoria" className="inputData-input">
                         <option value="Pacotes">Pacotes</option>
                         <option value="Contas">Contas</option>
@@ -64,9 +65,8 @@ function InputData() {
                         <option value="Mensalistas">Mensalistas</option>
                     </select>
                     
-                    <br />
                     <label htmlFor="categoria">Quantidade de usos: </label>
-                    <input type="text" name="qtdUsos" className="inputData-input" value={qtdUsos} onChange={(e) => setQtdUsos(e.target.value)} /><br />
+                    <input type="text" name="qtdUsos" className="inputData-input" value={qtdUsos} onChange={(e) => setQtdUsos(e.target.value)} />
                     <button className="inputData-button" type="submit">Cadastrar</button>
                 </form>
             </div>
